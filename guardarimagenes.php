@@ -107,7 +107,7 @@ if (isset($_FILES['imagen1']) && 0<strlen($_FILES['imagen1']['name'])) {
 
 
 if (isset($_FILES['imagen2']) && 0<strlen($_FILES['imagen2']['name']) ) {
-    if ( $errorFichero2 > 0 ) {//compruebo los errores de la imagen 1
+    if ( $errorFichero2 > 0 ) {//compruebo los errores de la imagen 2
         $mensaje .= mostrarMensageError($errorFichero2, $codigosErrorSubida, $nombreFichero2);
     }else{
         $mensaje.=guardarFichero($temporalFichero2, $directorioSubida, $nombreFichero2);
