@@ -38,7 +38,7 @@ function existeFichero($fichero) {
     return $respuesta;
 }
 //
-function comprovarErrores($name,$size,$directorioSubida) {
+function comprobarErrores($name,$size,$directorioSubida) {
     $mensaje=0;
     $ruta=$directorioSubida."/".$name;
     $tipos=['jpg','png'];//tipos de extensiones permitidas
@@ -78,7 +78,7 @@ if (isset($_FILES['imagen1']) && 0<strlen($_FILES['imagen1']['name'])) {
     $nombreFichero1   =   $_FILES['imagen1']['name'];
     $tamanioFichero1  =   $_FILES['imagen1']['size'];
     $temporalFichero1 =   $_FILES['imagen1']['tmp_name'];
-    $errorFichero1=comprovarErrores($nombreFichero1, $tamanioFichero1,$directorioSubida);        
+    $errorFichero1=comprobarErrores($nombreFichero1, $tamanioFichero1,$directorioSubida);        
    
 }
 
@@ -86,7 +86,7 @@ if (isset($_FILES['imagen2'])&& 0<strlen($_FILES['imagen2']['name'])  ) {
     $nombreFichero2   =   $_FILES['imagen2']['name'];
     $tamanioFichero2  =   $_FILES['imagen2']['size'];
     $temporalFichero2 =   $_FILES['imagen2']['tmp_name'];
-    $errorFichero2=comprovarErrores($nombreFichero2, $tamanioFichero2,$directorioSubida);        
+    $errorFichero2=comprobarErrores($nombreFichero2, $tamanioFichero2,$directorioSubida);        
       
 }
 if( (isset($_FILES['imagen2']) && isset($_FILES['imagen1'])) && (0<strlen($_FILES['imagen1']['name']) && 0<strlen($_FILES['imagen2']['name']))) { //Compruebo si tiene el tamaño minimo, los dos en conjunto.
