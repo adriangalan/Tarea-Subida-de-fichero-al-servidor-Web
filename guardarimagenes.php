@@ -95,9 +95,6 @@ if (count($_FILES)>1) {
         }
     }    
 }
-
-    var_dump($_FILES);
-
 ?>
 
 <html>
